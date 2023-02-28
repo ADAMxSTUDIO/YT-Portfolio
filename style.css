@@ -1,0 +1,384 @@
+/*All resources sites used :
+Poppins https://fonts.google.com/specimen/Poppins#standard-styles for font-family
+https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css for adjusting logo icons
+Font awesome https://fontawesome.com/search?q=youtube&s=solid%2Cbrands for getting the logo icons 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+    --main-color: #3a6cf4;
+    --background-color: #f0f0f0;
+    --interactif-color: #601cfc;
+    --degraded-main-color: #4e9eff;
+}
+header{
+    background-color: var(--background-color);
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;  /*top&bottom right&left*/
+}
+#x-logo{
+    text-transform: lowercase;
+}
+.logo{
+    text-decoration: none;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;  /* 1.8 x 16 = ..px default size, em to be relative to the body if we changes the font-size of the body everything will change without doing it manually !! */
+}
+.navigation>a{
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+.navigation>a:hover{
+ color: var(--interactif-color);
+}
+section{
+    padding: 100px 200px;
+}
+.main{
+    width: 100%;
+    min-height: 100vh; /*100vh is 100% of the viewport height*/
+    display: flex;
+    align-items: center;
+    background-image: url(Pics\ Stock/Pic\ On\ the\ stage.png); /*background: url(Pics\ Stock/Pic\ On\ the\ stage.png) no-repeat;*/
+    background-repeat: no-repeat; /*To avoid duplication of the chosen image*/
+    background-size: cover; /*Resize the background image to cover the entire container*/
+    background-position: top top;
+    background-attachment: fixed; /*To fix the image while scrolling*/
+    /*-webkit-background-size: cover;
+    filter: blur(3px);*/
+}
+.main h2{
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px var(--background-color);
+}
+.main h2 span{
+    display: inline-block; /*To make an inline element a block to adjust it using margin and padding */
+    margin-top: 10px;
+    color: var(--degraded-main-color);
+    font-size: 3em;
+    font-size: 600;
+    text-shadow: 1px 1px 1px var(--main-color);
+}
+.main h3{
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 1px var(--background-color-color);
+}
+.main-btn{
+    color: #fff;
+    background-color: var(--main-color);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 700;
+    display: inline-block; /* because a is an inline element */
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.3s ease;
+}
+.main-btn:hover{
+    background-color: var(--interactif-color);
+    transform: scale(1.1); /*takes x and y, if 1 value given it goes to both of them*/
+}
+.social-icons a{
+    color: #fff;
+    font-size: 1.7em;
+    padding-right: 30px;
+    transition: 0.3s ease;
+}
+.social-icons a:hover{
+    color: var(--interactif-color);
+    transform: scale(1.1);
+}
+.title{
+    display: flex; /*Even if it is just one element containing nothing, it is easy to centre it using flexbox*/
+    justify-content: center;
+    color: var(--main-color);
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    /*gap: 25px; same as margin:25px; between each other */
+}
+.card{
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 25px;
+    transition: 0.3s ease;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.icon{
+    color: var(--main-color);
+    font-size: 8em;
+    text-align: center;
+}
+.info{
+    text-align: center;
+}
+.info h3{
+    color: var(--main-color);
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+.projects{
+    background-color: #0b003b;
+}
+.projects .content{
+    margin-top: 30px;
+}
+.project-card{
+    background-color: #fff;
+    border: 1px solid #fff;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+.project-card:hover{
+    transform: scale(1.1);
+}
+.project-card .project-image:hover{
+    opacity: 0.9;
+}
+.project-image img{
+    width: 100%;
+}
+.project-info{
+    padding: 1em;
+}
+.project-category{
+    font-size: 0.8em;
+    color: #000;
+}
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+.more-details{
+    text-decoration: none;
+    color: var(--main-color);
+}
+.more-details:hover{
+    color: var(--interactif-color);
+}
+form legend{
+    color:var(--main-color);
+    font-size: 2em;
+    font-weight: 700;
+}
+form label{
+    display: inline-block;
+    margin-top: 10px;
+    color: #000;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+form label:hover{
+    color: var(--interactif-color);
+}
+form input{
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--degraded-main-color);
+    font-size: 1em;
+    font-weight: 500;
+    min-width: 100%;
+    padding: 10px;
+    border: 3px solid var(--degraded-main-color);
+    border-radius: 15px;
+}
+form input::placeholder{
+    color: var(--main-color);
+    opacity: 0.4;
+}
+form input:hover{
+    box-shadow:0 0 15px var(--degraded-main-color);
+}
+form input:invalid{
+    color:#ff0000;
+}
+fieldset{
+    margin-top: 10px;
+    border-width: 0;
+    display: flex;
+    justify-content: space-between;
+}
+#submit-btn,#reset-btn{
+    color: #fff;
+    background-color: var(--main-color);
+    font-size: 0.8em;
+    font-weight: 700;
+    display: inline-block; /* because a is an inline element */
+    padding: 0.3em 1em;
+    letter-spacing: 1px;
+    border: 3px ridge var(--main-color);
+    border-radius: 15px;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+#reset-btn{
+    background-color: #ff0000;
+    border: 3px ridge #ff0000;
+}
+form button:hover{
+    transform: scale(1.1);
+}
+form a{
+    font-size: 0.7em;
+    color: var(--main-color);
+    transition: 0.3s ease;
+}
+form a:hover{
+    color: var(--interactif-color);
+    transform: scale(1.1);
+}
+footer{
+    background-color: #0b003b;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+footer p{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+footer a{
+    color: var(--main-color);
+}
+.animated-stuff-box{
+    position: relative;
+    width: 7em;
+    height: 7em;
+    background-color: white;
+    border-radius: 50%;
+    animation: animated-box 8s ease-in-out 0s infinite forwards;
+}
+.animated-stuff-circle{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 185);
+    border-radius: 50%;
+    animation: animated-circle 8s ease-in-out 1s infinite forwards;
+}
+@keyframes animated-box {
+    0%,100%{
+        left: 0;
+        opacity: 1;
+        box-shadow: 0 0 10px white;
+        transform: rotate(0deg);
+    }
+    50%{
+        left: 100px;
+        background-color: blue;
+        border-radius: 0;
+        opacity: 0.5;
+        transform: rotate(90deg);
+    }
+}
+.animated-stuff-box:hover{
+    box-shadow: 0 0 10px lightblue;
+    background-color: #000;
+}
+@keyframes animated-circle {
+    0%,100%{
+        left: 0;
+        opacity: 1;
+        box-shadow: 0 0 10px white;
+        transform: scale(1);
+        transform: skew(0deg);
+    }
+    50%{
+        left: 50px;
+        background-color: orange;
+        border-radius: 30%;
+        opacity: 0.5;
+        box-shadow: 0 0 10px orange;
+        transform: scale(1.1);
+        transform: skew(20deg);
+    }
+}
+.animated-stuff-circle:hover{
+    box-shadow: 0 0 10px yellow;
+    background-color: yellow;
+}
+@media all and (max-width:1023px) {
+    header{
+        padding: 12px 20px;
+    }
+    .navigation a{
+        padding-left: 10px;
+    }
+    .title{
+        font-size: 1.8em;
+    }
+    section{
+        padding: 80px 20px;
+    }
+    .main h2{
+        font-size: 1em;
+    }
+    .main h3{
+        font-size: 1.6em;
+    }
+    .contnet{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 641px){
+    body{
+        font-size: 12px; /*every element with em unit will be 12 px instead of 16px*/
+    }
+    .main h2{
+        font-size: 0.8em;
+    }
+    .main h3{
+        font-size: 1.4em;
+    }
+}
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+    }
+}
